@@ -31,14 +31,23 @@ All the parameters need to be claimed correctly inside the file.
 Some important parameters include:
 
 -system_name : the name of system. Input trajectories files are named as: system_name_<traj_index>, where <traj_index> is the index of a trajectory starts from 0.
+
 -n_trajs: the number of trajectories
+
 -bias: whether the trajectories are from biased MD.
+
 -time_delay: predictive time delay.
+
 -T: temperature in unit of Kelvin.
--op_dim: dimensionality of order parameters
--rc_dim: dimensionality of reaction coordinates
+
+-op_dim: dimensionality of order parameters.
+
+-rc_dim: dimensionality of reaction coordinates.
+
 -training_size: the number of data points for training. Training size should be smaller than the total number of available data points.
+
 -batch_size: number of data points in each batch. The total number of training data point n should be a multiple of batch_size.
+
 -epochs: number of epochs to train the model. A rule of thumb is training_size*epochs/batch_size should be around 10^5.
 
 By default, input trajectories are in the `input` directory and the output can be found in  `output` directory. Users should create these two directories before running the code.
