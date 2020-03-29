@@ -51,7 +51,7 @@ def COLVAR2npy( Name, Temperature, OP_dim, Dir ='input/', Bias = False ):
         traj_save_name = Dir+'x_'+Name
         bias_save_name = Dir+'w_'+Name
         if path.exists( traj_save_name+'.npy' ) and path.exists( bias_save_name+'.npy'):
-            print( 'npy files already exit, delete them if you want to generate new ones.')
+            print( 'npy files already exist, delete them if you want to generate new ones.')
         else:
             Data = np.loadtxt(Dir+ Name)    
             x = Data[::, 1:OP_dim +1]   
