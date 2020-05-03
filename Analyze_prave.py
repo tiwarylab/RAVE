@@ -46,7 +46,7 @@ def save_result(system_name, op_dim, time_delay, trials, s_vari, training_size, 
             save_dir = system_name+'_dt'+str(dt)+'_trail'+str(trial)+'_svar'+str(s_vari)+'_train_size'+str(training_size)+network_info+'.npy'
             Result_loss = np.load(save_path+'Loss_'+save_dir) 
             Result_weights = np.load(save_path+'Weights_'+save_dir) 
-            Loss.append(np.average( Result_loss[-10:,-1] ))
+            Loss.append(np.average( Result_loss[-2:,-1] ))
             Weights.append( Result_weights[-1,:,:] )
         
         Weights = np.array( Weights )
